@@ -1,6 +1,5 @@
 /* Page themes */
-:root {
-    
+:root {  
                         /* Theme Colors */
     --primaryColor: rgb(22, 110, 110); /* Color of body background */
     --secondaryColor: rgb(48, 90, 91);
@@ -22,7 +21,11 @@ body {
     background-color: var(--primaryColor);
     margin-top: 7vh;
     font-family: "Poppins", serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 
 /* header elements */
 .header {
@@ -43,7 +46,6 @@ body {
     margin-top: 2px;
     margin-bottom: 2px;
     padding: 5px;
-
 }
 .header button:hover {
     color: var(--headerSecondary) ;
@@ -66,6 +68,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 4fr;
     height: 83vh;
+    flex: 1;
 }
 .landingBarContainer button {
     all: unset;
@@ -110,13 +113,15 @@ body {
     font-size: 250px;
 }
 #landingSubtitle {
-    font-size: 30px;
-    font-style: italic;
+    font-size: 28px;
     padding-left: 15px;
     
 }
 .highlightText {
     color: var(--primaryRed);
+    background-color: white;
+    padding-right: 1vh;
+    padding-left: 1vh;
 }
 .imgContainer {
     vertical-align: baseline;
@@ -156,7 +161,7 @@ body {
 
 /* Technical Experience Section */
 .techExperienceContainer {
-height: 83vh;
+height: 85vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -165,8 +170,7 @@ background-color: var(--secondaryColor);
 .techHeader {
     background-color: var(--secondaryColor);
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 .techHeader  h1 {   
     font-size: 80px; 
@@ -201,5 +205,175 @@ background-color: var(--secondaryColor);
     object-fit: contain;
     width: 200px;
     height: 90px;
+}
+
+/* Education Section */
+/* Left */
+.eduContainer {
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.edu.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color:var(--secondaryColor);
+}
+.eduTitle {
+    background-color: var(--primaryRed);
+    width: 10vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rotatedTitle {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    display: inline-block;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--primaryWhite);
+    width: 80vh;
+}
+.degreeContainer {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    justify-content: center;
+    border-color: var(--primaryRed);
+    border-radius: 5px;
+    border-width: .5vh;
+    margin: 2vh;
+    padding: 1vh;
+    height: auto;
+    width: 90%;
+    background-color: var(--secondaryColor);
+   
+}
+.degreeContainer h2, p {
+    margin: 0;
+    padding: 0;
+}
+/* Right */
+.edu.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+}
+.eduDegree {
+    color: var(--primaryRed);
+}
+.edu.right h2 {
+    font-size: 10vh;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primaryWhite);
+    padding: .5vh;
+    margin: 0;
+    margin-top: 1.5vh;
+    width: 96%;
+    height: min-content;
+
+}
+.certsContainer {
+    color: white;
+    line-height: 1.2;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.certsContainer h3, p {
+    margin: 0;
+    display: inline-block;
+}
+.certsContainer h3 {
+    font-size: 4vh;
+}
+
+/* Contact Section */
+.contactSection {
+    width: 100%;
+    height: 90vh;
+    background-color: var(--secondaryColor);
+    border-width: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.contactForm {
+    padding: 2vh;
+    background-color: var(--primaryColor);
+    border: solid;
+    
+}
+.contactHeader {
+    color: var(--primaryWhite);
+    font-size: 9vh;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    
+}
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+.emailInput {
+    margin-bottom: .5vh;
+    height: 4vh;
+}
+#emailForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#emailMessage {
+    margin-bottom: .5vh;
+}
+#submitBtn {
+   all: unset;
+   margin-right: 1vh;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   padding: 5px;
+   background-color: var(--primaryWhite);
+   color: var(--primaryColor);
+   border: solid;
+   width:fit-content;
+   cursor: pointer;
+   transition: color .15s;
+}
+#submitBtn:hover {
+    color: var(--headerSecondary);
+}
+#submitBtn:active {
+    opacity: .6;
+}
+.contactInfo {
+    width: 100%;
+}
+.contactInfo p{
+    background-color: var(--primaryRed);
+    margin: 3px;
+   
+}
+
+/* Footer */
+.footer {
+    background-color: white;
+    width: 100%;
 }
 
