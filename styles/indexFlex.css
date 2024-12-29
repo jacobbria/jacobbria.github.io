@@ -29,9 +29,16 @@ img {
     height: 90%;
     object-fit: cover;
     display: inline-block;
-    opacity: .5;
+    opacity: .6;
 }
-
+hr {
+    border: none;
+    border-top: 2px solid #000000; /* Custom styling for the line */
+}
+a {
+    text-decoration: none;
+    color: inherit; 
+}
 .section {
     flex: 1;
     height: auto;
@@ -54,16 +61,20 @@ img {
     /*background-color: aquamarine;*/
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    padding-left: 10vh;
 }
+
 #header_Right {
     flex: 1;
     display: flex;
     justify-content: end;
+    padding-right: 3vh;
 }
 #header button {
     all: unset;
-    margin-right: 1vh;
+    margin-right: 2vh;
     margin-top: 2px;
     margin-bottom: 2px;
     padding: 5px;
@@ -84,9 +95,10 @@ img {
     color: var(--primaryThemeDark);
     border-color: var(--primaryThemeDark);
 }
-#header #h_Home:hover {
-    color: var(--headerSecondary);
+#header #h_Home:hover{
+    color: var(--primaryThemeDark);
 }
+
 
 /* Landing Page */
 #landingSection {
@@ -96,6 +108,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 5px;
 }
 #landingSection #landing_Left {
     flex: 3;
@@ -104,7 +117,17 @@ img {
     align-items: end;
     justify-content: center;
     color: white;
+    position: relative;
     
+}
+.nameOverlay {
+    position: absolute; /* Position text on top of the image */
+    top: 50%; /* Center the text vertically */
+    left: 48%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust to ensure perfect centering */
+    color: white;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
 }
 #landingSection #landing_Right {
     flex: 2;
@@ -121,14 +144,12 @@ img {
 }
 #landingSection #landing_Right .list-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: start;
     justify-content: start;
     width: 98%;
     height: auto;
-    margin-top: 5px;
-    margin-bottom: 10px;
 }
 
 .list_item_left {
@@ -137,11 +158,10 @@ img {
     height: 100%;
     padding-left: 2px;
     padding-right: 2px;
-    color: black;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     color: var(--primaryTheme);
 }
@@ -151,11 +171,9 @@ img {
     flex: 3;
     justify-content: start;
     align-items: center;
-    background-color: var(--primaryTheme);
     width: 100%;
     height: 100%;
-    border: solid;
-    border-color: transparent;
+    padding: 0;
 }
 #landingSection #landing_Right ul {
     padding-right: 10px;
@@ -164,11 +182,10 @@ img {
 #landingSection #landing_Right li {
     line-height: auto;
     margin-bottom: 5px;
-    color: white;
-    font-size: 18px;
+    color: black;
+    font-size: 1.25rem;
 }
 .icon {
-    
     font-size: 40px;
     padding: 6px;
     border: solid;
@@ -176,30 +193,82 @@ img {
     background-color: white;
 }
 .degree {
-    color: white;
+    color: black;
     font-weight: bold;
 }
 .degreeTitle {
     font-style: italic;
 }
 
-/* Landing Page Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
-    /* Make landing section (Right side) and Left side stack vertically */
-    #landingSection {
-        flex-direction: column;
-    }
-    #landingSection #landing_Right li {
-        font-size: 14px;
-    }
-    #landingSection #landing_Right h2 {
-        font-size: 17px;
-    }
-  
-}
+
 /* Experience Page */
+#expHeader {
+    display: flex;
+    justify-content: center;
+}
 #expSection {
-    background-color: lightgreen;
+    background-color: var(--primaryTheme);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.expImgContainer img {
+    width: 100%;
+    height: auto; 
+    object-fit: contain;
+    opacity: 1;
+}
+
+.expImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 8px;
+}
+#expSection h1 {
+    line-height: 0;
+}
+#expSection h3,h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#expSection h3 {
+    text-decoration: underline;
+}
+.expGrid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates responsive columns*/
+    gap: 16px;
+    width: 90%; 
+    height: auto;
+    margin-bottom: 32px;
+   
+}
+.expGrid.FR {
+    background-color: var(--primaryThemeDark);
+    width: 100%;
+    color: white;
+    height: auto;
+
+}
+.expItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+.expItem p {
+    font-size: 1rem;
 }
 /* Education Page */
 #eduSection {
@@ -212,4 +281,35 @@ img {
 /* Footer */
 #footer {
     background-color: lightgray;
+}
+
+/* Landing Page Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    /* Make landing section (Right side) and Left side stack vertically */
+    #landingSection {
+        flex-direction: column;
+    }
+    .list_item_left {
+        justify-content: center;
+    }
+    #landingSection #landing_Right .list-item {
+        flex-direction: row;
+    }
+    #landingSection #landing_Right li {
+        font-size: 14px;
+    }
+    .list_item_left {
+        font-size: .8rem;
+    }
+   .nameOverlay {
+    font-size: 1rem;
+   }
+    .expGrid  {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+    }
+    .FR {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap: 8px;
+    }
 }
