@@ -1,16 +1,14 @@
 /* Page themes */
 :root {  
     /* Theme Colors */
---primaryColor: rgb(22, 110, 110); /* Color of body background */
---secondaryColor: rgb(48, 90, 91);
+--primaryTheme: rgb(57, 151, 129);
+--primaryThemeDark: rgb(51, 114, 99);
+--secondaryTheme: rgb(218, 79, 47);
 
 --primaryRed: rgb(204, 73, 73);
 --darkRed: rgb(133, 40, 40);
 
 --primaryWhite: white;
-
---primaryBlack: black;
---lightBlack: rgb(65, 65, 65);
 
 --headerPrimary: black;
 --headerSecondary: rgb(130, 128, 128);
@@ -31,6 +29,7 @@ img {
     height: 90%;
     object-fit: cover;
     display: inline-block;
+    opacity: .5;
 }
 
 .section {
@@ -57,7 +56,6 @@ img {
     display: flex;
     flex-direction: row;
 }
-
 #header_Right {
     flex: 1;
     display: flex;
@@ -70,20 +68,21 @@ img {
     margin-bottom: 2px;
     padding: 5px;
     transition: color .15s;
+    cursor: pointer;
 }
 #header button:active {
     opacity: .5;
 }
 #header #h_Contact {
     font-weight: bold;
-    color: var(--primaryRed);
+    color: var(--primaryTheme);
     border: solid;
     border-radius: 2px;
-    border-color: var(--primaryRed);
+    border-color: var(--primaryThem);
 }
 #header #h_Contact:hover {
-    color: var(--darkRed);
-    border-color: var(--darkRed);
+    color: var(--primaryThemeDark);
+    border-color: var(--primaryThemeDark);
 }
 #header #h_Home:hover {
     color: var(--headerSecondary);
@@ -91,7 +90,7 @@ img {
 
 /* Landing Page */
 #landingSection {
-    background-color: antiquewhite;
+    background-color: var(--primaryTheme);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -102,7 +101,6 @@ img {
     flex: 3;
     display: flex;
     height: 100vh;
-    background-color: brown;
     align-items: end;
     justify-content: center;
     color: white;
@@ -113,12 +111,10 @@ img {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(68, 172, 77);
+    background-color: var(--primaryWhite);
     align-items: start;
     justify-content: center;
     color: white;
-    margin: 0;
-    padding: 0;
 }
 #landingSection #landing_Right h2 {
     line-height: 0;
@@ -127,36 +123,49 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 5px;
+    align-items: start;
+    justify-content: start;
+    width: 98%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
+
 .list_item_left {
     flex: 1;
-    background-color: aliceblue;
     width: 100%;
     height: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
     color: black;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--primaryTheme);
 }
 .list_item_right {
     display: flex;
     flex-wrap: wrap;
     flex: 3;
-    background-color: rgb(80, 161, 231);
+    justify-content: start;
+    align-items: center;
+    background-color: var(--primaryTheme);
     width: 100%;
     height: 100%;
-    color: black;
-    padding-left: 0;
-    padding-right: 5px;
+    border: solid;
+    border-color: transparent;
 }
 #landingSection #landing_Right ul {
+    padding-right: 10px;
     list-style: none;
-
+}
+#landingSection #landing_Right li {
+    line-height: auto;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 18px;
 }
 .icon {
     
@@ -166,14 +175,26 @@ img {
     border-radius: 50%;
     background-color: white;
 }
+.degree {
+    color: white;
+    font-weight: bold;
+}
+.degreeTitle {
+    font-style: italic;
+}
 
-/* Media Query for Smaller Screens */
+/* Landing Page Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
     /* Make landing section (Right side) and Left side stack vertically */
     #landingSection {
         flex-direction: column;
     }
-
+    #landingSection #landing_Right li {
+        font-size: 14px;
+    }
+    #landingSection #landing_Right h2 {
+        font-size: 17px;
+    }
   
 }
 /* Experience Page */
