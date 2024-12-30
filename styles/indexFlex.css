@@ -131,14 +131,16 @@ a {
     position: relative;
     
 }
+
 .nameOverlay {
-    position: absolute; /* Position text on top of the image */
-    top: 50%; /* Center the text vertically */
-    left: 48%; /* Center the text horizontally */
-    transform: translate(-50%, -50%); /* Adjust to ensure perfect centering */
+    position: absolute; 
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%); 
     color: white;
-    font-size: 2.5rem; /* Adjust font size as needed */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
+    font-size: 2.5rem; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
 }
 #landingSection #landing_Right {
     flex: 2;
