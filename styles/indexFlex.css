@@ -50,17 +50,32 @@ a {
     background-color:var(--primaryWhite);
     position: fixed;
     width: 100%;
+    height: 40px;
     display: flex;
     flex-direction: row;
+    z-index: 1;
 }
 #header_Left {
     flex: 1;
-    /*background-color: aquamarine;*/
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
     flex-direction: row;
-    padding-left: 10vh;
+    padding-left: 3vh;
+    padding-top: 5px;
+    gap: 10px;
+}
+
+#header_Left img {
+    object-fit: contain;
+    width: 35px;
+    height: 40px;
+    opacity: 1;
+}
+#header_Left img:hover{
+    opacity: .7;
+    cursor: pointer;
 }
 #header_Right {
     flex: 1;
@@ -329,7 +344,6 @@ a {
     flex-direction: column;
     
 }
-
 #contactSection p {
     display: flex;
     flex-direction: row;
@@ -347,15 +361,15 @@ a {
 #emailForm input, textarea {
     margin-bottom: 5px;
 }
-#emailForm input:hover, textarea:hover, input:active, textarea:active {
+#emailForm input:active, textarea:active {
     background-color: #d3d3d3;
     color: #a9a9a9; 
     pointer-events: none;
     cursor: not-allowed;
 }
 #submitBtn {
+cursor: not-allowed;
  width: min-content;
- cursor: pointer;
  font-weight: bold;
  color: var(--primaryWhite);
  background-color: transparent;
@@ -381,8 +395,9 @@ a {
 /* Footer */
 #footer {
     display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--primaryThemeDark);
     color: white;
 }
 
