@@ -14,9 +14,6 @@
 --headerSecondary: rgb(130, 128, 128);
 }
 
-html {
-    scroll-behavior: smooth;
-}
 html, body {
     height: 100%;
     margin: 0;
@@ -65,7 +62,6 @@ a {
     flex-direction: row;
     padding-left: 10vh;
 }
-
 #header_Right {
     flex: 1;
     display: flex;
@@ -213,6 +209,11 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    border-bottom: solid;
+    border-width: 7px;
+    border-color: var(--primaryThemeDark);
+    padding-top: 10px;
+
     
 }
 .expImgContainer img {
@@ -221,7 +222,6 @@ a {
     object-fit: contain;
     opacity: 1;
 }
-
 .expImgContainer {
     display: flex;
     justify-content: center;
@@ -241,14 +241,12 @@ a {
     text-decoration: underline;
 }
 .expGrid {
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates responsive columns*/
     gap: 16px;
     width: 90%; 
-    height: auto;
+    height: 85vh;
     margin-bottom: 32px;
-   
 }
 .expGrid.FR {
     background-color: var(--primaryThemeDark);
@@ -256,6 +254,9 @@ a {
     color: white;
     height: auto;
 
+}
+.expGrid.Tools .expItem {
+    background-color: transparent;
 }
 .expItem {
     display: flex;
@@ -265,22 +266,124 @@ a {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    background-color: var(--primaryThemeDark);
     
 }
 .expItem p {
     font-size: 1rem;
 }
-/* Education Page */
-#eduSection {
-    background-color: lightcoral;
+
+/* Certification Page */
+#certSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 16px;
+    padding: 16px;
 }
+#certs {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(108, 108, 108, 0.1); 
+    min-height: 250px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+#certSection h3 {
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-decoration: underline;
+    margin-bottom: 16px; 
+    padding-left: 50px;
+
+}
+#certCard {
+    display: flex;
+    flex-direction: column; 
+    gap: 4px; 
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px; 
+}
+#certCard p {
+    margin: 0; 
+    font-size: 1rem;
+    line-height: 1.2; 
+}
+#certTitle {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
 /* Contact Page */
 #contactSection {
-    background-color: lightgoldenrodyellow;
+    background-color: var(--primaryTheme);
+    border-top: solid;
+    border-width: 7px;
+    border-color: var(--primaryThemeDark);
+    padding-bottom: 10px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    
 }
+
+#contactSection p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    color: white;
+    font-size: 1.2rem;
+  
+}
+#emailForm {
+    display: flex;
+    flex-direction: column;
+}
+#emailForm input, textarea {
+    margin-bottom: 5px;
+}
+#emailForm input:hover, textarea:hover, input:active, textarea:active {
+    background-color: #d3d3d3;
+    color: #a9a9a9; 
+    pointer-events: none;
+    cursor: not-allowed;
+}
+#submitBtn {
+ width: min-content;
+ cursor: pointer;
+ font-weight: bold;
+ color: var(--primaryWhite);
+ background-color: transparent;
+ border: solid;
+ border-radius: 2px;
+ border-color: var(--primaryWhite);
+
+}
+#submitBtn:hover {
+    color: rgb(184, 184, 184);
+    border-color:rgb(184, 184, 184);
+}
+#submitBtn:active {
+    opacity: .6;
+}
+#contact_Header {
+    color: var(--primaryWhite);
+    font-size: 3.8rem;
+    line-height: 0;
+}
+
+
 /* Footer */
 #footer {
-    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
 }
 
 /* Landing Page Media Query for Smaller Screens */
@@ -307,9 +410,14 @@ a {
     .expGrid  {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 8px;
+        height: auto;
     }
     .FR {
         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
         gap: 8px;
+        height: auto;
+    }
+    .expGrid.Tools .expItem {
+        background-color: white;
     }
 }

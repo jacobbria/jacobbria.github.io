@@ -17,7 +17,7 @@
             </div>
             <div id="header_Right">
                 <button id="h_Home"><a href="#">Home</a></button>
-                <button id="h_Contact"> Contact</button>
+                <button id="h_Contact"><a href="#contactSection">Contact</a></button>
             </div>
         </div>
         <div class="section" id="landingSection">
@@ -78,10 +78,9 @@
             </div>
             </div>
         </div>
+        
         <h1 id="expHeader">Technical Experience</h1>
         <div class="section" id="expSection">
-            <!-- Languages -->
-            <h3>Languages</h3>
             <div class="expGrid">
                 <div class="expItem">
                     <div class="expImgContainer">
@@ -107,7 +106,7 @@
                     </div>
                     <h3>JavaScript</h3>
                     <p>
-                        Styled and crafted responsive layouts for web applications using CSS and modern tools.
+                       Applied JS to create responsive and dynamic web applications.
                     </p>
                 </div>
                 <div class="expItem">
@@ -116,7 +115,8 @@
                     </div>
                     <h3>C#</h3>
                     <p>
-                        Styled and crafted responsive layouts for web applications using CSS and modern tools.
+                        Developed web application back-ends using ASP .NET 
+                        and mobile with .NET MAUI.
                     </p>
                 </div>
                 <div class="expItem">
@@ -125,7 +125,8 @@
                     </div>
                     <h3>Java</h3>
                     <p>
-                        Styled and crafted responsive layouts for web applications using CSS and modern tools.
+                        Built web application back-ends using Java EE and Spring Boot.
+                        Developed console based applications.
                     </p>
                 </div>
                 <div class="expItem">
@@ -134,12 +135,12 @@
                     </div>
                     <h3>SQL</h3>
                     <p>
-                        Styled and crafted responsive layouts for web applications using CSS and modern tools.
+                       Created databases for use in applications. Queried in application and 
+                       managed inside of SSMS, MySQL Server.
                     </p>
                 </div>
             </div>
         
-            <h3 id="header_FR">Frameworks</h3>
             <div class="expGrid FR">
                 <div class="expItem">
                     <div class="expImgContainer">
@@ -147,7 +148,8 @@
                     </div>
                     <h3>.NET</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                        Web applications were created using ASP .NET in a MVC pattern.
+                        Cross-platform mobile applications created with .NET MAUI.
                     </p>
                 </div>
                 <div class="expItem">
@@ -156,7 +158,8 @@
                     </div>
                     <h3>Flutter</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                        Front-end designs were designed and then developed using the Dart language 
+                        with an empahasis on responsive design. 
                     </p>
                 </div>
                 <div class="expItem">
@@ -165,20 +168,21 @@
                     </div>
                     <h3>Spring Boot</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                        Web applications with various organizations were created using a MVC
+                        architecture pattern. 
                     </p>
                 </div>
             </div>
         
-            <h3>Tools</h3>
-            <div class="expGrid">
+            <div class="expGrid Tools">
                 <div class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/github-logo.png" alt="HTML">
                     </div>
                     <h3>Version Control</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                        Projects were stored and saved with Git via GitHub repository.
+                        Updates were pulled from branches and pushed with new features.
                     </p>
                 </div>
                 <div class="expItem">
@@ -187,7 +191,8 @@
                     </div>
                     <h3>Prompt Engineering</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                        AI has increasingly grown in capacity. Utilized various LLMs 
+                        to achieve better output and desired results.
                     </p>
                 </div>
                 <div class="expItem">
@@ -196,23 +201,69 @@
                     </div>
                     <h3>IDE</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                       Developed applications in a variety of IDE's. This includes VS Code, Visual Studio,
+                       Eclipse, and Android Studio. Practiced with debugging tools.
                     </p>
                 </div>
             </div>
         </div>
         
-
-        <div class="section" id="eduSection">
-            <p>certs</p>
+        <div id="certSection">
+            <div id="certs">
+                <h3>Certifications</h3>
+                <uL>
+                    <div id="certCard">
+                        <p id="certTitle"> C# Fundementals</p>
+                        <p>freeCodeCamp | 2024</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle"> Fast Track Programming</p>
+                        <p>Sinclair College| 2023</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle"> IT Fundementals</p>
+                        <p>Sinclair College| 2023</p>
+                    </div>
+                </uL>
+            </div>
+            <div id="certs">
+                <h3>Recognitions</h3>
+                <uL>
+                    <div id="certCard">
+                        <p id="certTitle"> Team Lead</p>
+                        <p> Java Web Dev Club | Fall 2024</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle">Dean's List</p>
+                        <p>Sinclair College | Fall 2023</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle"> President's List</p>
+                        <p>Franklin University | Summer 2024</p>
+                    </div>
+                </uL>
+            </div>
         </div>
-
+        
+        <!-- TO DO
+            Make contact section work 
+        -->
         <div class="section" id="contactSection">
-            <p>contact</p>
+            <h2 id="contact_Header"> CONTACT ME</h2>
+    
+            <form id="emailForm">
+                <input type="text" class="emailInput" name="emailAddress" placeholder=Email>
+                <input type="text" class="emailInput" name="emailSubject" placeholder=Subject>
+                <textarea id="emailMessage" name="emailMessage" rows="10" cols="50">
+                </textarea>
+                <input id="submitBtn" type="submit" value="Send Message">
+            </form>
+
+         
         </div>
 
         <div id="footer">
-            <p>footer</p>
+            <p>Jacob Bria 2025</p>
         </div>
     </body>
 </html>
