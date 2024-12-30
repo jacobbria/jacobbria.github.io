@@ -1,24 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Bria Resume</title>
-        <link rel="stylesheet" href="../styles/landingStyle.css">
+        <meta charset="UTF-8">
+        <title>Jacob Bria Resume</title>
+        <link rel="stylesheet" href="../styles/indexFlex.css">
+   
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-        <section class="landingRow"> 
-            <div class="column left">
-                <p id="hello_text">Hi, I'm</p>
-                <h2>Jake Bria</h2>
-                <p id="descr_text"> Information Technology Student</p>          
+        <div id="header">
+            <div id="header_Left">
+                <a href="https://github.com/jacobbria" target="_blank">
+                    <img src="../assets/logos/github-logo.png"> 
+                </a>
+                <a href="https://www.linkedin.com/in/jacobbria/" target="_blank">
+                    <img src="../assets/logos/linkedin-logo.png"> 
+                </a>
             </div>
-          <div class="column right">
-            <img src="../assets/imgs/Head_Shot.webp" alt="headshot">
-          </div>
-        </section>
-        <div class="landingBar"> 
-            <div> 
-                <button class="linkBtn">Download Resume</button>
+            <div id="header_Right">
+                <button id="h_Home"><a href="#">Home</a></button>
+                <button id="h_Contact"><a href="#contactSection">Contact</a></button>
             </div>
+        </div>
+        <div class="section" id="landingSection">
+            <div id="landing_Left">
+                <img src="../assets/imgs/headShotTransparent.png" alt="My picture">
+                <div class="nameOverlay">
+                    <h1>Jake Bria</h1>
+                </div>
+            </div>
+            <div id="landing_Right">
+                <div class="list-item" id="aboutMe">
+                  <div class="list_item_left">
+                    <span class="icon">👤</span>
+                    <h2> About</h2>
+                 
+                  </div>
+                  <div class="list_item_right">
+                    <uL>
+                        <li> Hello, I'm Jacob (or Jake).</li>
+                        <li> I'm currently an IT student at Franklin University.
+                            I have studied several programming languages while 
+                            practicing web and mobile development.
+                        </li>
+                        <li>
+                            Outside of computers, I teach and practice
+                            Brazilian Jiu-Jitsu, love drawing or painting,
+                            and try to contain my corgi (Mochi).
+                        </li>
+                    </uL> 
+                  </div>
+                </div>
+                <div class="list-item">
+                    <div class="list_item_left">
+                        <span class="icon">🎓</span> 
+                        <h2>Education</h2>
+                        
+                      </div>
+                      <div class="list_item_right">
+                        <ul>
+                            <li>
+                                <span class="degree">Bachelor's of Science</span>
+                                </br>
+                                <span class="degreeTitle"> Information Technology </span>
+                                </br>
+                                Franklin University | 2024-Present
+                            </li>
+                            
+                            <li>
+                                <span class="degree">Associates of Applied Science</span>
+                                </br>
+                                <span class="degreeTitle"> Software Development </span>
+                                </br>
+                                Sinclair College | 2022-2024
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <h1 id="expHeader">Technical Experience</h1>
+        <div class="section" id="expSection">
+            
+            <div class="expGrid">
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/html-logo.png" alt="HTML">
+                    </div>
+                    <h3>HTML</h3>
+                    <p>
+                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/css-logo.png" alt="CSS">
+                    </div>
+                    <h3>CSS</h3>
+                    <p>
+                        Styled and crafted responsive layouts for web applications using CSS and modern tools.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/js-logo.png" alt="js">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>
+                       Applied JS to create responsive and dynamic web applications.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/csharp-logo.png" alt="Csharp">
+                    </div>
+                    <h3>C#</h3>
+                    <p>
+                        Developed web application back-ends using ASP .NET 
+                        and mobile with .NET MAUI.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/javaCup-logo.png" alt="java">
+                    </div>
+                    <h3>Java</h3>
+                    <p>
+                        Built web application back-ends using Java EE and Spring Boot.
+                        Developed console based applications.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/sql-logo.png" alt="sql">
+                    </div>
+                    <h3>SQL</h3>
+                    <p>
+                       Created databases for use in applications. Queried in application and 
+                       managed inside of SSMS, MySQL Server.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="expGrid FR">
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/net-logo.png" alt="dotNet">
+                    </div>
+                    <h3>.NET</h3>
+                    <p>
+                        Web applications were created using ASP .NET in a MVC pattern.
+                        Cross-platform mobile applications created with .NET MAUI.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/flutter-logo.png" alt="flutter">
+                    </div>
+                    <h3>Flutter</h3>
+                    <p>
+                        Front-end designs were designed and then developed using the Dart language 
+                        with an empahasis on responsive design. 
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/boot-logo.png" alt="Spring Boot">
+                    </div>
+                    <h3>Spring Boot</h3>
+                    <p>
+                        Web applications with various organizations were created using a MVC
+                        architecture pattern. 
+                    </p>
+                </div>
+            </div>
+        
+            <div class="expGrid Tools">
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/github-logo.png" alt="HTML">
+                    </div>
+                    <h3>Version Control</h3>
+                    <p>
+                        Projects were stored and saved with Git via GitHub repository.
+                        Updates were pulled from branches and pushed with new features.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/chatgpt-logo.png" alt="HTML">
+                    </div>
+                    <h3>Prompt Engineering</h3>
+                    <p>
+                        AI has increasingly grown in capacity. Utilized various LLMs 
+                        to achieve better output and desired results.
+                    </p>
+                </div>
+                <div class="expItem">
+                    <div class="expImgContainer">
+                        <img src="../assets/logos/vscode-logo.png" alt="HTML">
+                    </div>
+                    <h3>IDE</h3>
+                    <p>
+                       Developed applications in a variety of IDE's. This includes VS Code, Visual Studio,
+                       Eclipse, and Android Studio. Practiced with debugging tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="certSection">
+            <div id="certs">
+                <h3>Certifications</h3>
+                <uL>
+                    <div id="certCard">
+                        <p id="certTitle"> C# Fundementals</p>
+                        <p>freeCodeCamp | 2024</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle"> Fast Track Programming</p>
+                        <p>Sinclair College| 2023</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle"> IT Fundementals</p>
+                        <p>Sinclair College| 2023</p>
+                    </div>
+                </uL>
+            </div>
+            <div id="certs">
+                <h3>Recognitions</h3>
+                <uL>
+                    <div id="certCard">
+                        <p id="certTitle"> Team Lead</p>
+                        <p> Java Web Dev Club | Fall 2024</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle">Dean's List</p>
+                        <p>Sinclair College | Fall 2023</p>
+                    </div>
+                    <div id="certCard">
+                        <p id="certTitle"> President's List</p>
+                        <p>Franklin University | Summer 2024</p>
+                    </div>
+                </uL>
+            </div>
+        </div>
+        
+        <!-- TO DO
+            Make contact section work 
+        -->
+        <div class="section" id="contactSection">
+            <h2 id="contact_Header"> CONTACT ME</h2>
+    
+            <form id="emailForm">
+                <input type="text" class="emailInput" name="emailAddress" placeholder="Email (UNAVAILABLE)" readonly>
+                <input type="text" class="emailInput" name="emailSubject" placeholder="Subject (UNAVAILABLE)" readonly>
+                <textarea id="emailMessage" name="emailMessage" rows="10" cols="50" readonly>
+                </textarea>
+                <input id="submitBtn" type="submit" value="Send Message">
+            </form>
+
+         
+        </div>
+
+        <div id="footer">
+            <p>@Jacob Bria 2025</p>
         </div>
     </body>
 </html>
+
