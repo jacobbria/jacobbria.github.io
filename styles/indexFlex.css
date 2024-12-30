@@ -443,8 +443,12 @@ cursor: not-allowed;
     .expGrid.Tools .expItem {
         background-color: white;
     }
+    .expGrid.Tools .expItem:hover {
+        color: black;
+    }
 }
 
+/* Shake animation applied to cards */
 @keyframes shake {
     0% {
         transform: translateX(0);
