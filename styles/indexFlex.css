@@ -228,8 +228,6 @@ a {
     border-width: 7px;
     border-color: var(--primaryThemeDark);
     padding-top: 10px;
-
-    
 }
 .expImgContainer img {
     width: 100%;
@@ -258,6 +256,7 @@ a {
 .expGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates responsive columns*/
+    justify-content: center;
     gap: 16px;
     width: 90%; 
     height: 85vh;
@@ -282,7 +281,12 @@ a {
     border-radius: 8px;
     text-align: center;
     background-color: var(--primaryThemeDark);
+    transition: color .15s;
     
+}
+.expItem:hover {
+    color: white;
+    animation: shake 0.5s ease;
 }
 .expItem p {
     font-size: 1rem;
@@ -321,6 +325,10 @@ a {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 16px; 
+    transition: transform 0.3s ease;
+}
+#certCard:hover {
+    transform: translateX(-10px);
 }
 #certCard p {
     margin: 0; 
@@ -434,5 +442,23 @@ cursor: not-allowed;
     }
     .expGrid.Tools .expItem {
         background-color: white;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
