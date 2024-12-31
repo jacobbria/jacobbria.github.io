@@ -73,7 +73,7 @@ a {
     height: 40px;
     opacity: 1;
 }
-#header_Left img:hover{
+#header_Left img:hover, #header_Left img:focus {
     opacity: .7;
     cursor: pointer;
 }
@@ -102,11 +102,11 @@ a {
     border-radius: 2px;
     border-color: var(--primaryThem);
 }
-#header #h_Contact:hover {
+#header #h_Contact:hover, #header #h_Contact:focus {
     color: var(--primaryThemeDark);
     border-color: var(--primaryThemeDark);
 }
-#header #h_Home:hover{
+#header #h_Home:hover, #header #h_Home:focus{
     color: var(--primaryThemeDark);
 }
 
@@ -286,7 +286,7 @@ a {
     transition: color .15s;
     
 }
-.expItem:hover {
+.expItem:hover, .expItem:focus {
     color: white;
     animation: shake 0.5s ease;
 }
@@ -329,7 +329,7 @@ a {
     margin-bottom: 16px; 
     transition: transform 0.3s ease;
 }
-#certCard:hover {
+#certCard:hover,#certCard:focus {
     transform: translateX(-10px);
 }
 #certCard p {
@@ -388,7 +388,7 @@ cursor: not-allowed;
  border-color: var(--primaryWhite);
 
 }
-#submitBtn:hover {
+#submitBtn:hover, #submitBtn:focus {
     color: rgb(184, 184, 184);
     border-color:rgb(184, 184, 184);
 }
@@ -445,7 +445,7 @@ cursor: not-allowed;
     .expGrid.Tools .expItem {
         background-color: white;
     }
-    .expGrid.Tools .expItem:hover {
+    .expGrid.Tools .expItem:hover, .expItem:focus {
         color: black;
     }
 }
