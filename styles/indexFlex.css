@@ -448,6 +448,9 @@ cursor: not-allowed;
     .expGrid.Tools .expItem:hover, .expItem:focus {
         color: black;
     }
+    #contact_Header {
+        font-size: 2rem;
+    }
 }
 
 /* Shake animation applied to cards */
