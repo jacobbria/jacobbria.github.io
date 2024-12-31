@@ -266,10 +266,12 @@ a {
     margin-bottom: 32px;
 }
 .expGrid.FR {
+    align-items: start;
     background-color: var(--primaryThemeDark);
     width: 100%;
     color: white;
     height: auto;
+    
 
 }
 .expGrid.Tools .expItem {
