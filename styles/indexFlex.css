@@ -66,7 +66,6 @@ a {
     padding-top: 5px;
     gap: 10px;
 }
-
 #header_Left img {
     object-fit: contain;
     width: 35px;
@@ -110,7 +109,6 @@ a {
     color: var(--primaryThemeDark);
 }
 
-
 /* Landing Page */
 #landingSection {
     background-color: var(--primaryTheme);
@@ -131,7 +129,6 @@ a {
     position: relative;
     
 }
-
 .nameOverlay {
     position: absolute; 
     top: 50%;
@@ -140,8 +137,14 @@ a {
     color: white;
     font-size: 2.5rem; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-
 }
+.arrowOverlay {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #landingSection #landing_Right {
     flex: 2;
     display: flex;
