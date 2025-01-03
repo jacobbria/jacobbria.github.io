@@ -1,0 +1,73 @@
+/*Imports web themes colors*/
+@import url('../styles/themes.css');
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+.header {
+    background-color:var(--primaryWhite);
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    font-family: "Poppins", serif;
+    font-weight: normal;
+}
+/* Buttons */
+.header button {
+    all: unset;
+    margin-right: 2vh;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 5px;
+    transition: color .15s;
+    cursor: pointer;
+    font-weight: normal;
+}
+.header button:active {
+    opacity: .5;
+}
+/* Left Section */
+.h_Left {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 25px;
+    padding-top: 5px;
+    gap: 10px;
+}
+.h_Left img {
+    object-fit: contain;
+    width: 35px;
+    height: 40px;
+}
+.h_Left img:hover, .h_Left:focus {
+    opacity: .7;
+    cursor: pointer;
+}
+/* Right Section */
+.h_Right {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    padding-right: 25px;
+}
+#h_Contact {
+    font-weight: bold;
+    color: var(--primaryTheme);
+    border: solid;
+    border-radius: 2px;
+    border-color: var(--primaryThem);
+}
+#h_Home:hover, #header #h_Home:focus, #h_Contact:hover, #header #h_Contact:focus{
+    color: var(--primaryThemeDark);
+}
+#h_Contact:hover, #header #h_Contact:focus {
+    border-color: var(--primaryThemeDark);
+}
