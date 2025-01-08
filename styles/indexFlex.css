@@ -381,7 +381,7 @@ a {
     cursor: not-allowed;
 }
 #submitBtn {
-cursor: not-allowed;
+    
  width: min-content;
  font-weight: bold;
  color: var(--primaryWhite);
