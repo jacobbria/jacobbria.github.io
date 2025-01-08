@@ -265,10 +265,10 @@
         <div class="section" id="contactSection">
             <h2 id="contact_Header"> CONTACT ME</h2>
     
-            <form id="emailForm">
-                <input type="text" class="emailInput" name="emailAddress" placeholder="Email (UNAVAILABLE)" readonly>
-                <input type="text" class="emailInput" name="emailSubject" placeholder="Subject (UNAVAILABLE)" readonly>
-                <textarea id="emailMessage" name="emailMessage" rows="10" cols="50" readonly>
+            <form id="emailForm" action="https://formspree.io/f/mwppwjrg" method="POST">
+                <input type="text" class="emailInput" name="emailAddress" placeholder="Email" required>
+                <input type="text" class="emailInput" name="emailSubject" placeholder="Subject" required>
+                <textarea id="emailMessage" name="emailMessage" rows="10" cols="50" required>
                 </textarea>
                 <input id="submitBtn" type="submit" value="Send Message">
             </form>
