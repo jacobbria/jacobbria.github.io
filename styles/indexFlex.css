@@ -377,8 +377,6 @@ a {
 #emailForm input:active, textarea:active {
     background-color: #d3d3d3;
     color: #a9a9a9; 
-    pointer-events: none;
-    cursor: not-allowed;
 }
 #submitBtn {
     
