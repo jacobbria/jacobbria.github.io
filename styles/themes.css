@@ -1,0 +1,17 @@
+/*
+Store colors for consistent use when styling
+*/
+:root {  
+    /* Theme Colors */
+--primaryTheme: rgb(57, 151, 129);
+--primaryThemeDark: rgb(51, 114, 99);
+--secondaryTheme: rgb(218, 79, 47);
+
+--primaryRed: rgb(204, 73, 73);
+--darkRed: rgb(133, 40, 40);
+
+--primaryWhite: white;
+
+--headerPrimary: black;
+--headerSecondary: rgb(130, 128, 128);
+}
