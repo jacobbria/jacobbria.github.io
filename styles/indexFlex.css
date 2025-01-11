@@ -266,7 +266,7 @@ a {
 }
 .expGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates responsive columns*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     gap: 16px;
     width: 90%; 
@@ -279,7 +279,8 @@ a {
     width: 100%;
     color: white;
     height: auto;
-    
+    display: flex;
+    flex-direction: row;
 
 }
 .expGrid.Tools .expItem {
@@ -420,7 +421,7 @@ a {
     color: white;
 }
 
-/* Landing Page Media Query for Smaller Screens */
+/* Landing Page Media Query for Smaller Screens Desktop First Design */
 @media screen and (max-width: 768px) {
     /* Make landing section (Right side) and Left side stack vertically */
     #landingSection {
@@ -450,6 +451,10 @@ a {
         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
         gap: 8px;
         height: auto;
+       
+    }
+    .expGrid.FR{
+        flex-direction: column;
     }
     .expGrid.Tools .expItem {
         background-color: white;
