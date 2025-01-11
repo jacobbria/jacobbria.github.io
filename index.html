@@ -12,7 +12,8 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-        <div id="header">
+        <!-- Header -->
+        <nav id="header">
             <div id="header_Left">
                 <a href="https://github.com/jacobbria" target="_blank">
                     <img src="../assets/logos/github-logo.png"> 
@@ -26,12 +27,14 @@
                 <button id="h_Home"><a href="/html/blog.html">Blog</a></button>
                 <button id="h_Contact"><a href="#contactSection">Contact</a></button>
             </div>
-        </div>
-        <div class="section" id="landingSection">
+        </nav>
+
+        <!-- Landing page-->
+        <section class="section" id="landingSection">
             <div id="landing_Left">
-                <img src="../assets/imgs/headShotTransparent.png" alt="My picture">
+                <img src="../assets/imgs/headShotTransparentClean.png" alt="My picture">
                 <div class="nameOverlay">
-                    <h1>Jake Bria</h1>
+                    <h1><strong>Jake Bria</strong></h1>
                 </div>
                 <div class="arrowOverlay">
                     <a href="#expSection">
@@ -40,12 +43,11 @@
                 </div>
             </div>
             <div id="landing_Right">
-                <div class="list-item" id="aboutMe">
-                  <div class="list_item_left">
+                <article class="list-item" id="aboutMe">
+                  <header class="list_item_left">
                     <span class="icon">👤</span>
                     <h2> About</h2>
-                 
-                  </div>
+                  </header>
                   <div class="list_item_right">
                     <uL>
                         <li> Hello, I'm Jacob (or Jake).</li>
@@ -55,18 +57,19 @@
                         </li>
                         <li>
                             Outside of computers, I teach and practice
-                            Brazilian Jiu-Jitsu, love drawing or painting,
+                            Brazilian Jiu-Jitsu, love drawing and painting,
                             and try to contain my corgi (Mochi).
                         </li>
                     </uL> 
                   </div>
-                </div>
-                <div class="list-item">
-                    <div class="list_item_left">
+                </article>
+                
+                <!-- Education-->
+                <section class="list-item">
+                    <header class="list_item_left">
                         <span class="icon">🎓</span> 
-                        <h2>Education</h2>
-                        
-                      </div>
+                        <h2>Education</h2> 
+                    </header>
                       <div class="list_item_right">
                         <ul>
                             <li>
@@ -86,27 +89,28 @@
                             </li>
                         </ul> 
                     </div>
-                </div>
+                </section>
             </div>
             </div>
-        </div>
+        </section>
 
         <!--TO DO-->
         <!--Ensure cards are reactive on mobile/safari-->
-        <h1 id="expHeader">Technical Experience</h1>
-        <div class="section" id="expSection">
+        <header><h1 id="expHeader">Technical Experience</h1></header>
+        <section class="section" id="expSection">
             
-            <div class="expGrid">
-                <div class="expItem">
+            <section class="expGrid">
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/html-logo.png" alt="HTML">
                     </div>
                     <h3>HTML</h3>
                     <p>
-                        Designed and developed web applications using HTML to form the skeleton of the UI and front-end.
+                        Designed and developed responsive web pages using HTML to create well-structured, accessible, and 
+                        user-friendly interfaces. Focused on semantic markup to ensure clarity and compatibility across modern browsers.
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/css-logo.png" alt="CSS">
                     </div>
@@ -114,8 +118,8 @@
                     <p>
                         Styled and crafted responsive layouts for web applications using CSS and modern tools.
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/js-logo.png" alt="js">
                     </div>
@@ -123,8 +127,8 @@
                     <p>
                        Applied JS to create responsive and dynamic web applications.
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/csharp-logo.png" alt="Csharp">
                     </div>
@@ -133,8 +137,8 @@
                         Developed web application back-ends using ASP .NET 
                         and mobile with .NET MAUI.
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/javaCup-logo.png" alt="java">
                     </div>
@@ -143,8 +147,8 @@
                         Built web application back-ends using Java EE and Spring Boot.
                         Developed console based applications.
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/sql-logo.png" alt="sql">
                     </div>
@@ -153,11 +157,11 @@
                        Created databases for use in applications. Queried in application and 
                        managed inside of SSMS, MySQL Server.
                     </p>
-                </div>
-            </div>
+                </article>
+            </section>
         
-            <div class="expGrid FR">
-                <div class="expItem">
+            <section class="expGrid FR">
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/net-logo.png" alt="dotNet">
                     </div>
@@ -166,8 +170,8 @@
                         Web applications were created using ASP .NET in a MVC pattern.
                         Cross-platform mobile applications created with .NET MAUI.
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/flutter-logo.png" alt="flutter">
                     </div>
@@ -176,8 +180,8 @@
                         Front-end designs were designed and then developed using the Dart language 
                         with an emphasis on responsive design. 
                     </p>
-                </div>
-                <div class="expItem">
+                </article>
+                <article class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/boot-logo.png" alt="Spring Boot">
                     </div>
@@ -186,10 +190,10 @@
                         Web applications with various organizations were created using a MVC
                         architecture pattern. 
                     </p>
-                </div>
-            </div>
+                </article>
+            </section>
         
-            <div class="expGrid Tools">
+            <section class="expGrid Tools">
                 <div class="expItem">
                     <div class="expImgContainer">
                         <img src="../assets/logos/github-logo.png" alt="HTML">
@@ -220,10 +224,11 @@
                        Eclipse, and Android Studio. Practiced with debugging tools.
                     </p>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
         
-        <div id="certSection">
+        <!-- Certification Section -->
+        <section id="certSection">
             <div id="certs">
                 <h3>Certifications</h3>
                 <uL>
@@ -244,42 +249,43 @@
             <div id="certs">
                 <h3>Recognitions</h3>
                 <uL>
-                    <div id="certCard">
+                    <article id="certCard">
                         <p id="certTitle"> Team Lead</p>
                         <p> Java Web Dev Club | Fall 2024</p>
-                    </div>
-                    <div id="certCard">
+                    </article>
+                    <article id="certCard">
                         <p id="certTitle">Dean's List</p>
                         <p>Sinclair College | Fall 2023</p>
-                    </div>
-                    <div id="certCard">
+                    </article>
+                    <article id="certCard">
                         <p id="certTitle"> President's List</p>
                         <p>Franklin University | Summer 2024</p>
-                    </div>
+                    </article> <div id="certCard">
+                        <p id="certTitle"> Dean's List</p>
+                        <p>Franklin University | Fall 2024</p>
+                    </article>
                 </uL>
             </div>
-        </div>
         
-        <!-- TO DO
-            Make contact section work 
-        -->
-        <div class="section" id="contactSection">
-            <h2 id="contact_Header"> CONTACT ME</h2>
-    
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contactSection">
+           <header><h2 id="contact_Header"> CONTACT ME</h2></header>
             <form id="emailForm" action="https://formspree.io/f/mwppwjrg" method="POST">
                 <input type="text" class="emailInput" name="emailAddress" placeholder="Email" required>
                 <input type="text" class="emailInput" name="emailSubject" placeholder="Subject" required>
                 <textarea id="emailMessage" name="message" rows="10" cols="50" placeholder="Your Message" required></textarea>
                 <input id="submitBtn" type="submit" value="Send Message">
             </form>
-
-         
-        </div>
-
-        <div id="footer">
+  
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
             <p>@Jacob Bria 2025</p>
-        </div>
+        </footer>
 
+        <!-- JS Links -->
         <script src="/javascript/index.js"></script> <!-- ref to JS page-->
     </body>
 </html>
