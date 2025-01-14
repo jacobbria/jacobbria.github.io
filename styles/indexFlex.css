@@ -108,13 +108,7 @@ a {
 #header #h_Home:hover, #header #h_Home:focus{
     color: var(--primaryThemeDark);
 }
-#h_blog {
-    transition: line-through 2s;
-}
-#h_blog:hover {
-    text-decoration: line-through;
-    color: grey;
-}
+
 
 
 /* Landing Page */
