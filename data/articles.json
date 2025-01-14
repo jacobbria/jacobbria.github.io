@@ -1,0 +1,17 @@
+{
+    "articles": [
+        {
+            "id": 0,
+            "title": "Exploring The Bootstrap Library",
+            "date-posted": "2025-01-09",
+            "content": "While learning how CSS " 
+        },
+        {
+            "id": 1,
+            "title": "My Second Article",
+            "date-posted": "2025-01-04",
+            "content": "This is the content of the second article!"
+        }
+
+    ]
+}

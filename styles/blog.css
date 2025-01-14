@@ -4,6 +4,7 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: "Poppins", serif;
+
 }
 
 body a {
@@ -11,3 +12,21 @@ body a {
    color: inherit; 
    
 }
+
+.blog_Content {
+    margin-top: 45px;
+    width: 100%;
+}
+.blog_Content h1 {
+    
+}
+/* Blog Card Styling */
+.card {
+    margin-bottom: .5rem;
+}
+.content {
+    text-indent: 10px; 
+    line-height: 1.5; 
+  }
+  
+  
