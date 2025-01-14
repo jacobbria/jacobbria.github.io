@@ -1,3 +1,5 @@
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -12,12 +14,25 @@ body a {
    color: inherit; 
    
 }
-
 .blog_Content {
     margin-top: 45px;
     width: 100%;
 }
-.blog_Content h1 {
+.blog_Photo {
+    object-fit:fill;
+    height: 18vh;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.blog_headshot {
+    height: 10vh;
+    border-radius: 50%;
+    border: solid;
+    border: solid 3px rgba(255, 255, 255, 0.341); 
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
     
 }
 /* Blog Card Styling */
@@ -28,5 +43,20 @@ body a {
     text-indent: 10px; 
     line-height: 1.5; 
   }
-  
+
+  @media screen and (min-width: 900px) {
+   
+    .blog_Photo {
+        object-fit:cover;
+        height: 40vh;
+        width: 100%;
+    }
+    .blog_headshot {
+        height: 20vh;
+        border-radius: 50%;
+        position: absolute;
+        top: 20%;
+        left: 45%;
+    }
+}
   
