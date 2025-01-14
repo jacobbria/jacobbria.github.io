@@ -8,13 +8,13 @@ fetch('../html/components/nav_bar.html')
 
 // Retrieve and then render blog content from Contenful
     // Initialize Contentful client
-const client = contentful.createClient({
-    space: '2zynx1qhiyas', // Replace with your Space ID
-    accessToken: 'ThGs2LPiO9dDkaeckwrgv27eLelE3SZr4cP-cl6066g' // Replace with your Access Token
+const client = contentful.createClient({ // <-- instantiates contentful object via CDN
+    space: '2zynx1qhiyas', 
+    accessToken: 'ThGs2LPiO9dDkaeckwrgv27eLelE3SZr4cP-cl6066g' 
   });
 
   // Fetch entries "Blog Post"
-  client.getEntries({ content_type: 'resumeBlogPost' })
+  client.getEntries({ content_type: 'resumeBlogPost' }) // <-- retrieves JSON object from API
     .then(response => {
       const articles = response.items;
       const cardsContainer = document.getElementById('cards-container');
@@ -22,8 +22,8 @@ const client = contentful.createClient({
       articles.forEach(article => {
         const { title, datePosted, blogContent } = article.fields;
         
-        // parse/format blog content with Marked
-        const formattedContent = marked.parse(blogContent);
+        // parse/format blog content with Marked Lib
+        const formattedContent = marked.parse(blogContent); 
         
         // Create  card
         const card = document.createElement('div');
@@ -34,13 +34,9 @@ const client = contentful.createClient({
           <div class="content"> <p>${formattedContent}</p> </div>
         `;
   
-        // Append card
+        // Append card to blog page
         cardsContainer.appendChild(card);
       });
     })
     .catch(error => console.error('Error fetching Contentful data:', error));
   
-
-
-// 2zynx1qhiyas
-// ThGs2LPiO9dDkaeckwrgv27eLelE3SZr4cP-cl6066g

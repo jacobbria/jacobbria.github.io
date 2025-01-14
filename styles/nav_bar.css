@@ -12,6 +12,7 @@ a {
     height: 40px;
     display: flex;
     flex-direction: row;
+    padding-bottom: 4px;
     z-index: 1;
     font-family: "Poppins", serif;
     font-weight: normal;
