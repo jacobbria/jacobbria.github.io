@@ -26,11 +26,10 @@ img {
     height: 90%;
     object-fit: cover;
     display: inline-block;
-    opacity: .6;
 }
 hr {
     border: none;
-    border-top: 2px solid #000000; /* Custom styling for the line */
+    border-top: 2px solid #000000;
 }
 a {
     text-decoration: none;
@@ -45,71 +44,6 @@ a {
     align-items: center;
 
 }
-/* Header */
-#header {
-    background-color:var(--primaryWhite);
-    position: fixed;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-}
-#header_Left {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-    padding-left: 3vh;
-    padding-top: 5px;
-    gap: 10px;
-}
-#header_Left img {
-    object-fit: contain;
-    width: 35px;
-    height: 40px;
-    opacity: 1;
-}
-#header_Left img:hover, #header_Left img:focus {
-    opacity: .7;
-    cursor: pointer;
-}
-#header_Right {
-    flex: 1;
-    display: flex;
-    justify-content: end;
-    padding-right: 3vh;
-}
-#header button {
-    all: unset;
-    margin-right: 2vh;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    padding: 5px;
-    transition: color .15s;
-    cursor: pointer;
-}
-#header button:active {
-    opacity: .5;
-}
-#header #h_Contact {
-    font-weight: bold;
-    color: var(--primaryTheme);
-    border: solid;
-    border-radius: 2px;
-    border-color: var(--primaryThem);
-}
-#header #h_Contact:hover, #header #h_Contact:focus {
-    color: var(--primaryThemeDark);
-    border-color: var(--primaryThemeDark);
-}
-#header #h_Home:hover, #header #h_Home:focus{
-    color: var(--primaryThemeDark);
-}
-
-
 
 /* Landing Page */
 #landingSection {
@@ -130,6 +64,9 @@ a {
     color: white;
     position: relative;
     
+}
+#landingSection #landing_Left img {
+    opacity: .6;
 }
 .nameOverlay {
     position: absolute; 

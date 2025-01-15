@@ -65,6 +65,9 @@ a {
     border: solid;
     border-radius: 2px;
     border-color: var(--primaryThem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #h_Home:hover, #header #h_Home:focus, #h_Contact:hover, #header #h_Contact:focus{
     color: var(--primaryThemeDark);

@@ -6,7 +6,6 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: "Poppins", serif;
-
 }
 
 body a {
@@ -33,11 +32,11 @@ body a {
     top: 10%;
     left: 40%;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
-    
 }
 /* Blog Card Styling */
 .card {
     margin-bottom: .5rem;
+    padding: .5rem;
 }
 .content {
     text-indent: 10px; 
