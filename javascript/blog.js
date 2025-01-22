@@ -14,29 +14,45 @@ const client = contentful.createClient({ // <-- instantiates contentful object v
   });
 
   // Fetch entries "Blog Post"
-  client.getEntries({ content_type: 'resumeBlogPost' }) // <-- retrieves JSON object from API
-    .then(response => {
-      const articles = response.items;
-      const cardsContainer = document.getElementById('cards-container');
-  
-      articles.forEach(article => {
-        const { title, datePosted, blogContent } = article.fields;
+  client.getEntries({ content_type: 'resumeBlogPost' })
+  .then(response => {
+    const articles = response.items;
+    const cardsContainer = document.getElementById('cards-container');
+
+    articles.forEach(article => {
+      const { title, datePosted, blogContent } = article.fields;
+      const formattedContent = marked.parse(blogContent);
+
+      // Create card element
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="title_container">
+          <div class="title_section">
+            <h3 class="title_blog">${title}</h3>
+          </div>
+          <div class="icon_container">
+            <span class="toggle_icon"><i class="fas fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <p><strong>Date Posted:</strong> ${new Date(datePosted).toDateString()}</p>
+        <div class="content hidden" id="content" >
+          <p>${formattedContent}</p>
+        </div>
+      `;
+
+      // Append card to the container
+      cardsContainer.appendChild(card);
+
+      // Set up event listener for the toggle icon
+      const toggleIcon = card.querySelector('.toggle_icon');
+      const contentDiv = card.querySelector('.hidden');
+
+      toggleIcon.addEventListener('click', () => {
+        toggleIcon.classList.toggle('rotated');
+        contentDiv.classList.toggle('hidden'); /* <-- this affects the hidden class to help prevent 2x clicks */
         
-        // parse/format blog content with Marked Lib
-        const formattedContent = marked.parse(blogContent); 
-        
-        // Create  card
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <h3>${title}</h3>
-          <p><strong>Date Posted:</strong> ${new Date(datePosted).toDateString()}</p>
-          <div class="content"> <p>${formattedContent}</p> </div>
-        `;
-  
-        // Append card to blog page
-        cardsContainer.appendChild(card);
       });
-    })
-    .catch(error => console.error('Error fetching Contentful data:', error));
-  
+    });
+  })
+  .catch(error => console.error('Error fetching Contentful data:', error));
