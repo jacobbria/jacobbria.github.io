@@ -22,21 +22,42 @@ const client = contentful.createClient({ // <-- instantiates contentful object v
       articles.forEach(article => {
         const { title, datePosted, blogContent } = article.fields;
         
-        // parse/format blog content with Marked Lib
+        // parse/format blog content with Marked Library
         const formattedContent = marked.parse(blogContent); 
         
         // Create  card
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-          <h3>${title}</h3>
+           <div class="title_container">
+              <div class="title_section">
+                <h3 class="title_blog">${title}</h3>
+              </div>
+              <div class="icon_container">
+                <span class="toggle_icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+          </div>
           <p><strong>Date Posted:</strong> ${new Date(datePosted).toDateString()}</p>
-          <div class="content"> <p>${formattedContent}</p> </div>
+          <div class="content hidden" id="content"> <p>${formattedContent}</p> </div>
         `;
   
         // Append card to blog page
         cardsContainer.appendChild(card);
+
+        
+      // Control Expand Icon and content when clicked
+      const toggleIcon = document.querySelector('.toggle_icon');
+      const contentDiv = document.querySelector('.content');
+
+      toggleIcon.addEventListener('click', () => {
+        console.log("Rotate clicked!");
+        toggleIcon.classList.toggle('rotated');  // Toggle the 'rotated' class on click
+        contentDiv.classList.toggle('hidden');
       });
+      
+    });
     })
     .catch(error => console.error('Error fetching Contentful data:', error));
+
+      
   
