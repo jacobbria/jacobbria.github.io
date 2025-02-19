@@ -355,24 +355,7 @@ a {
 /* Landing Page Media Query for Smaller Screens Desktop First Design */
 @media screen and (max-width: 1400px) {
     /* Make landing section (Right side) and Left side stack vertically */
-    #landingSection {
-        flex-direction: column;
-    }
-    .list_item_left {
-        justify-content: center;
-    }
-    #landingSection #landing_Right .list-item {
-        flex-direction: row;
-    }
-    #landingSection #landing_Right li {
-        font-size: 14px;
-    }
-    .list_item_left {
-        font-size: .8rem;
-    }
-   .nameOverlay {
-    font-size: 1rem;
-   }
+    
     .expGrid  {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: auto;
@@ -397,6 +380,28 @@ a {
     #contact_Header {
         font-size: 2rem;
     }
+}
+
+@media screen and (max-width: 1000px) {
+    #landingSection {
+        flex-direction: column;
+    }
+    .list_item_left {
+        justify-content: center;
+    }
+    #landingSection #landing_Right .list-item {
+        flex-direction: row;
+    }
+    #landingSection #landing_Right li {
+        font-size: 14px;
+    }
+    .list_item_left {
+        font-size: .8rem;
+    }
+   .nameOverlay {
+    font-size: 1rem;
+   }
+
 }
 
 /* Shake animation applied to cards */
