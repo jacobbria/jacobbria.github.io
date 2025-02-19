@@ -353,7 +353,7 @@ a {
 }
 
 /* Landing Page Media Query for Smaller Screens Desktop First Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
     /* Make landing section (Right side) and Left side stack vertically */
     #landingSection {
         flex-direction: column;
