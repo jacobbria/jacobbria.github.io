@@ -355,7 +355,10 @@ a {
 /* Landing Page Media Query for Smaller Screens Desktop First Design */
 @media screen and (max-width: 1400px) {
     /* Make landing section (Right side) and Left side stack vertically */
-    
+    .icon {
+        font-size: 20px;
+        padding: 0;
+    }
     .expGrid  {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: auto;
@@ -381,10 +384,14 @@ a {
         font-size: 2rem;
     }
 }
-
+/* Adjust for medium size screens */
 @media screen and (max-width: 1000px) {
+    .icon {
+        font-size: 40px;
+        padding: 6px;
+    }
     #landingSection {
-        flex-direction: column;
+        flex-direction: column;   
     }
     .list_item_left {
         justify-content: center;
